@@ -1,109 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavesh | Projects</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
         body {
-            background : rgb(72, 70, 70);
+            background: rgb(72, 70, 70);
+            font-family: 'Poppins', sans-serif;
         }
+
         .nav {
-            display : flex;
-            width : 100%;
-            background : black;
-            border-radius : 15px;
+            display: flex;
+            width: 100%;
+            background: black;
+            border-radius: 0 0 15px 15px;
             justify-content: center;
             align-items: center;
-            height : 50px;
+            height: 60px;
+            margin-bottom: 20px;
         }
+
         .nav h3 {
-            color : white;
-            font-family: 'poppins', sans-serif;
+            color: white;
+            font-size: 1.5rem;
         }
+
         .projects {
             display: flex;
             flex-direction: column;
-            margin-top : 20px;
-            height : auto;
-            width : 100%;
-            justify-content: center;
+            width: 100%;
             align-items: center;
-            gap : 30px;
+            gap: 20px;
+            padding-bottom: 30px;
         }
-        .projects .project {
-            color : white;
-            background : rgb(206, 15, 15);
-            border : 2px solid rgb(0, 255, 64);
-            width : 50%;
-            height : 50px;
-            border-radius : 15px;
-            display: flex;
-            transition: 0.3 ease-in-out;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-        .project:hover {
-            box-shadow : 0 0 10px blue;
-            transform : scale(1.1);
-            border : 2px solid rgb(255, 238, 0);
-        }
-        .project a {
+
+        .projects a {
             text-decoration: none;
-            color : white;
-            font-family : 'poppins',sans-serif;
-            white-space: wrap;
+            width: 50%;
+            display: flex;
+            justify-content: center;
         }
-        @media screen and (max-width:500px) {
+
+        .project {
+            color: white;
+            background: rgb(206, 15, 15);
+            border: 2px solid rgb(0, 255, 64);
+            width: 100%;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease-in-out;
+            gap: 15px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .project:hover {
+            box-shadow: 0 0 15px rgba(0, 100, 255, 0.8);
+            transform: scale(1.05);
+            border-color: yellow;
+            background: rgb(220, 20, 20);
+        }
+
+        @media screen and (max-width: 500px) {
             .nav {
-                height : 35px;
+                height: 50px;
+                border-radius: 0;
             }
 
             .nav h3 {
-                font-size : 15px;
+                font-size: 1.2rem;
             }
 
-            .projects {
-
+            .projects a {
+                width: 90%;
             }
 
             .project {
-                height : 40px !important;
-                width : 300px !important;
+                height: 50px;
+                font-size: 0.9rem;
             }
-
         }
     </style>
 </head>
+
 <body>
     <div class="nav">
         <h3>Bhavesh Projects</h3>
     </div>
+
     <div class="projects">
-        <div class="project">
-            <a href="https://bhavesh189.github.io/DocAna" target="_blank"><i class="fas fa-file-pdf"></i> DocAna AI</a>
-        </div>
-        <div class="project">
-            <a href="https://bhavesh189.github.io/EnterNet/home.html" target="_blank"><i class="fas fa-play"></i> EnterNet : NetFlix Clone</a>
-        </div>
-        <div class="project">
-            <a href="https://bhavesh189.github.io/CollageNotes" target="_blank"><i class="fas fa-sticky-note"></i> Notes Web + App</a>
-        </div>
-        <div class="project">   
-            <a href="https://bhavesh189.github.io/Bhavesh_Project_infinity" target="_blank"><i class="fas fa-robot"></i> Infinity Jarvis</a>
-        </div>
-        <div class="project">
-            <a href="index.html" target="_blank"><i class="fas fa-star"></i> More Coming</a>
-        </div>
+        <a href="https://bhavesh189.github.io/DocAna" target="_blank">
+            <div class="project">
+                <i class="fas fa-file-pdf"></i> DocAna AI
+            </div>
+        </a>
+
+        <a href="https://bhavesh189.github.io/EnterNet/home.html" target="_blank">
+            <div class="project">
+                <i class="fas fa-play"></i> EnterNet : Netflix Clone
+            </div>
+        </a>
+
+        <a href="https://bhavesh189.github.io/CollageNotes" target="_blank">
+            <div class="project">
+                <i class="fas fa-sticky-note"></i> Notes Web + App
+            </div>
+        </a>
+
+        <a href="https://bhavesh189.github.io/Bhavesh_Project_infinity" target="_blank">
+            <div class="project">
+                <i class="fas fa-robot"></i> Infinity Jarvis
+            </div>
+        </a>
+
+        <a href="index.html">
+            <div class="project" style="background: black; border-color: white;">
+                <i class="fas fa-star"></i> More Coming Soon
+            </div>
+        </a>
     </div>
 </body>
+
 </html>
