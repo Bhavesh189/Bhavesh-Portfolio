@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavesh | Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background : rgb(72, 70, 70);
+        }
+        .nav {
+            display : flex;
+            width : 100%;
+            background : black;
+            border-radius : 15px;
+            justify-content: center;
+            align-items: center;
+            height : 50px;
+        }
+        .nav h3 {
+            color : white;
+            font-family: 'poppins', sans-serif;
+        }
+        .projects {
+            display: flex;
+            flex-direction: column;
+            margin-top : 20px;
+            height : auto;
+            width : 100%;
+            justify-content: center;
+            align-items: center;
+            gap : 30px;
+        }
+        .projects .project {
+            color : white;
+            background : rgb(206, 15, 15);
+            border : 2px solid rgb(0, 255, 64);
+            width : 50%;
+            height : 50px;
+            border-radius : 15px;
+            display: flex;
+            transition: 0.3 ease-in-out;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .project:hover {
+            box-shadow : 0 0 10px blue;
+            transform : scale(1.1);
+            border : 2px solid rgb(255, 238, 0);
+        }
+        .project a {
+            text-decoration: none;
+            color : white;
+            font-family : 'poppins',sans-serif;
+            white-space: wrap;
+        }
+        @media screen and (max-width:500px) {
+            .nav {
+                height : 35px;
+            }
+
+            .nav h3 {
+                font-size : 15px;
+            }
+
+            .projects {
+
+            }
+
+            .project {
+                height : 40px !important;
+                width : 300px !important;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h3>Bhavesh Projects</h3>
+    </div>
+    <div class="projects">
+        <div class="project">
+            <a href="#"><i class="fas fa-file-pdf"></i> DocAna AI</a>
+        </div>
+        <div class="project">
+            <a href="#"><i class="fas fa-play"></i> EnterNet : NetFlix Clone</a>
+        </div>
+        <div class="project">
+            <a href="#"><i class="fas fa-sticky-note"></i> Notes Web + App</a>
+        </div>
+        <div class="project">
+            <a href="#"><i class="fas fa-robot"></i> Infinity Jarvis</a>
+        </div>
+        <div class="project">
+            <a href="#"><i class="fas fa-star"></i> More Coming</a>
+        </div>
+    </div>
+</body>
+</html>
