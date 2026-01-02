@@ -2,9 +2,8 @@ name: Deploy Portfolio with Secrets
 
 on:
   push:
-    branches: ["main"] # Agar tumhari branch 'master' hai to yahan 'master' likhna
+    branches: ["main"]
 
-# GitHub Pages ke liye permissions
 permissions:
   contents: read
   pages: write
