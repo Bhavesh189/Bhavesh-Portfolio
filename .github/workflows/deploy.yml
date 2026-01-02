@@ -20,23 +20,25 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # 👇 Updated: v3 -> v4
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # 👇 Yahan Maine '/' ki jagah '|' use kiya hai (Safer way)
+      # Secrets Injection (Single Line Command)
       - name: Inject Secrets into JS
-        run: |
-          sed -i 's|TOKEN|${{ secrets.TELEGRAM_TOKEN }}|g' contact.js
-          sed -i 's|ID_C|${{ secrets.TELEGRAM_CHAT_ID }}|g' contact.js
+        run: sed -i 's|TOKEN|${{ secrets.TELEGRAM_TOKEN }}|g' contact.js && sed -i 's|ID_C|${{ secrets.TELEGRAM_CHAT_ID }}|g' contact.js
 
+      # 👇 Updated: v3 -> v5
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5
 
+      # 👇 Updated: v1 -> v3 (Ye sabse zaroori tha)
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
 
+      # 👇 Updated: v1 -> v4
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
