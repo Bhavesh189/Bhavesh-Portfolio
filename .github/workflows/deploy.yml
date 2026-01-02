@@ -23,10 +23,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      # 👇 Yahan Maine '/' ki jagah '|' use kiya hai (Safer way)
       - name: Inject Secrets into JS
         run: |
-          sed -i 's/TOKEN/${{ secrets.TELEGRAM_TOKEN }}/g' contact.js
-          sed -i 's/ID_C/${{ secrets.TELEGRAM_CHAT_ID }}/g' contact.js
+          sed -i 's|TOKEN|${{ secrets.TELEGRAM_TOKEN }}|g' contact.js
+          sed -i 's|ID_C|${{ secrets.TELEGRAM_CHAT_ID }}|g' contact.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
